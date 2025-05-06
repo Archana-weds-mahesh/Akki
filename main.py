@@ -1,11 +1,10 @@
 import telebot
 import re
 
-# Hardcoded bot token (for private use only)
+# Hardcoded token for private use
 BOT_TOKEN = '7816936602:AAFNlwAXZLNd7fU1l56QhS-VW-WD4niBfBA'
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode='Markdown')
 
-# Only match messages like "450 15"
 pattern = re.compile(r'^\s*(\d+(\.\d+)?)\s+(\d+(\.\d+)?)\s*$')
 
 @bot.message_handler(func=lambda message: bool(pattern.match(message.text)))
