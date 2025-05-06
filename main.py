@@ -2,7 +2,7 @@ import telebot
 import re
 import os
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN')  # Get token from environment variable
+BOT_TOKEN = os.environ.get('7816936602:AAFNlwAXZLNd7fU1l56QhS-VW-WD4niBfBA')  # Get token from environment variable
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode='Markdown')
 
 pattern = re.compile(r'^\s*(\d+(\.\d+)?)\s+(\d+(\.\d+)?)\s*$')
